@@ -15,7 +15,7 @@ const VolunteerDashboard = () => {
 
   const fetchDonations = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/donations');
+      const res = await axios.get('https://food-bridge-2xe3.onrender.com/api/donations');
       setDonations(res.data);
       setLoading(false);
     } catch (err) {
@@ -25,7 +25,7 @@ const VolunteerDashboard = () => {
 
   const handleAssign = async (id) => {
     try {
-      await axios.post(`http://localhost:5000/api/donations/${id}/assign`);
+      await axios.post(https://food-bridge-2xe3.onrender.com/api/donations/${id}/assign`);
       fetchDonations();
     } catch (err) {
       alert('Error claiming task');
@@ -34,7 +34,7 @@ const VolunteerDashboard = () => {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.post(`http://localhost:5000/api/donations/${id}/status`, { status });
+      await axios.post(`https://food-bridge-2xe3.onrender.com/api/donations/${id}/status`, { status });
       fetchDonations();
     } catch (err) {
       alert('Error updating status');
