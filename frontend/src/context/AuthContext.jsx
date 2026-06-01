@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   const signup = async (username, email, password, role) => {
     try {
-      await axios.post('http://localhost:5000/api/auth/signup', { username, email, password, role });
+      await axios.post('https://food-bridge-2xe3.onrender.com/api/auth/signup', { username, email, password, role });
       return { success: true };
     } catch (error) {
       return { success: false, message: error.response?.data?.message || 'Signup failed' };
