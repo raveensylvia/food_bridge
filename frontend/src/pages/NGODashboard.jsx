@@ -16,7 +16,7 @@ const NGODashboard = () => {
 
   const fetchDonations = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/donations');
+      const res = await axios.get('https://food-bridge-2xe3.onrender.com/api/donations');
       setDonations(res.data);
       setLoading(false);
     } catch (err) {
@@ -26,7 +26,7 @@ const NGODashboard = () => {
 
   const handleAccept = async (id) => {
     try {
-      await axios.post(`http://localhost:5000/api/donations/${id}/accept`);
+      await axios.post(`https://food-bridge-2xe3.onrender.com/api/donations/${id}/accept`);
       fetchDonations();
     } catch (err) {
       alert('Error accepting donation');
