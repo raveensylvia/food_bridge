@@ -25,7 +25,7 @@ const VolunteerDashboard = () => {
 
   const handleAssign = async (id) => {
     try {
-      await axios.post(https://food-bridge-2xe3.onrender.com/api/donations/${id}/assign`);
+      await axios.post('https://food-bridge-2xe3.onrender.com/api/donations/${id}/assign`);
       fetchDonations();
     } catch (err) {
       alert('Error claiming task');
