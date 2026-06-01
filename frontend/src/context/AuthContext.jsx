@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      const response = await axios.post('https://food-bridge-2xe3.onrender.com/api/auth/login', { email, password });
       const { access_token, user: userData } = response.data;
       
       localStorage.setItem('token', access_token);
